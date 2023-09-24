@@ -1,0 +1,37 @@
+---
+import RecentItem from "./RecentItem.astro";
+import recentProjects from "../../mocks/recentProjects.json";
+---
+
+<section class="mx-auto max-w-screen-lg px-3 py-6">
+  <article>
+    <h2 class="mb-6 text-2xl font-bold">
+      Recent
+      <span
+        class:list={[
+          "bg-gradient-to-br",
+          "from-sky-500",
+          "to-cyan-400",
+          "bg-clip-text",
+          "text-transparent",
+        ]}
+      >
+        Projects
+      </span>
+    </h2>
+
+    <section class="flex flex-col gap-6">
+      {
+        recentProjects.map(({ name, description, image, skills, url }) => (
+          <RecentItem
+            name={name}
+            description={description}
+            url={url}
+            image={image}
+            skills={skills}
+          />
+        ))
+      }
+    </section>
+  </article>
+</section>

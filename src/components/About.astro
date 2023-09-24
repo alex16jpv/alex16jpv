@@ -4,50 +4,55 @@ import Github from "./svg/Github.astro";
 import Linkedin from "./svg/Linkedin.astro";
 ---
 
-<div class="relative z-10 flex min-h-screen h-auto justify-center items-center">
-  <div class="relative max-w-xl">
-    <div
-      class="absolute z-10 inset-0 bg-gradient-to-r from-green-400 to-blue-500 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-lg"
-    >
-    </div>
-    <div
-      class="relative z-20 bg-white md:flex justify-between p-12 shadow-lg rounded-lg w-full max-w-4xl"
-    >
-      <div class="sm:flex flex-col justify-between space-y-6 py-6 md:pr-10">
-        <div>
-          <h2 class="text-lg">Hello, I am</h2>
-          <h1
-            class="pt-1 text-5xl font-bold bg-gradient-to-r from-green-500 to-blue-600 bg-clip-text text-transparent"
-          >
-            Alexander Valencia
-          </h1>
-        </div>
-        <p class="text-xl leading-relaxed">
-          Full-stack developer with a passion for back-end development using
-          NodeJS and a strong interest in front-end development.
-        </p>
-        <div class="inline-flex text-xl text-gray-600 space-x-5">
-          <Icon
-            className="hover:text-blue-700"
-            label="Go to my LinkedIn profile."
-            href="https://www.linkedin.com/in/alex16jpv"
-          >
-            <Linkedin />
-          </Icon>
-          <Icon
-            className="hover:text-blue-700"
-            label="Go to my Github profile."
-            href="https://github.com/alex16jpv"
-          >
-            <Github />
-          </Icon>
-        </div>
+<section class:list={["mx-auto", "max-w-screen-lg", "px-3", "py-6"]}>
+  <article
+    class:list={[
+      "flex",
+      "flex-col",
+      "items-center",
+      "md:flex-row",
+      "md:justify-between",
+      "md:gap-x-24",
+    ]}
+  >
+    <div>
+      <h1 class="text-3xl font-bold">
+        Hi there, I'm <span
+          class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent"
+        >
+          Alexander Valencia
+        </span> 👋
+      </h1>
+
+      <p class="mt-6 text-xl leading-9">
+        Full-stack developer with a passion for backend development using NodeJS
+        and a strong interest in frontend development. Committed to continuous
+        learning and exploring new technologies and languages.
+      </p>
+
+      <div class="mt-3 flex gap-1">
+        <Icon
+          label="Go to Github profile"
+          className="hover:translate-y-1 hover:text-zinc-600"
+          href="https://github.com/alex16jpv"
+        >
+          <Github w={48} h={48} />
+        </Icon>
+        <Icon
+          label="Go to LinkedIn profile"
+          className="hover:translate-y-1 hover:text-sky-600"
+          href="https://www.linkedin.com/in/alex16jpv"
+        >
+          <Linkedin w={48} h={48} />
+        </Icon>
       </div>
-      <!-- <img
-        src="https://placehold.co/320x360?text=AV"
-        alt="profile photo"
-        class="flex-shrink-0 w-80 rounded-full border-6 border-white shadow-md"
-      /> -->
     </div>
-  </div>
-</div>
+    <div class="shrink-0">
+      <img
+        class="h-80 w-64"
+        src="https://placehold.co/256x320?text=AV"
+        alt="Profile photo"
+      />
+    </div>
+  </article>
+</section>

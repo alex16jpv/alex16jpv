@@ -1,0 +1,27 @@
+---
+interface Props {
+  name: string;
+  bgColor?: string;
+  textColor?: string;
+}
+
+const {
+  name,
+  bgColor = "bg-slate-500",
+  textColor = "text-neutral-50",
+}: Props = Astro.props;
+---
+
+<spam
+  class:list={[
+    "rounded-md",
+    "px-2",
+    "py-1",
+    "text-xs",
+    "font-semibold",
+    bgColor,
+    textColor,
+  ]}
+>
+  {name}
+</spam>

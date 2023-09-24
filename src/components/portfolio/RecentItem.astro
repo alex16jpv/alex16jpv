@@ -1,0 +1,56 @@
+---
+import Badge from "./Badge.astro";
+
+interface Props {
+  name: string;
+  description: string;
+  image?: string;
+  skills?: string[];
+  url?: string;
+}
+
+const {
+  name,
+  description,
+  image = "https://placehold.co/144x144",
+  skills = [],
+  url = "#!",
+} = Astro.props;
+---
+
+<article
+  class:list={[
+    "flex",
+    "flex-col",
+    "items-center",
+    "gap-x-8",
+    "rounded-md",
+    "bg-slate-800",
+    "pl-6",
+    "p-3",
+    "md:flex-row",
+  ]}
+>
+  <div class="shrink-0">
+    <a href={url}>
+      <img
+        class="h-36 w-36 hover:translate-y-1"
+        src={image}
+        alt={`Project ${name}`}
+      />
+    </a>
+  </div>
+
+  <div>
+    <div class="flex flex-col items-center gap-y-2 md:items-start">
+      <a class="hover:text-cyan-400" href={url}>
+        <h3 class="text-xl font-semibold">{name}</h3>
+      </a>
+      <div class="flex flex-wrap gap-2">
+        {skills.map((skill) => <Badge name={skill} />)}
+      </div>
+    </div>
+
+    <p class="mt-3 text-gray-400">{description}</p>
+  </div>
+</article>
