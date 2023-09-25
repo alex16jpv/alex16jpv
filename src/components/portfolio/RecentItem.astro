@@ -25,7 +25,8 @@ const {
     "items-center",
     "gap-x-8",
     "rounded-md",
-    "bg-slate-800",
+    "dark:bg-secondary",
+    "bg-slate-100",
     "pl-6",
     "p-3",
     "md:flex-row",
@@ -43,7 +44,10 @@ const {
 
   <div>
     <div class="flex flex-col items-center gap-y-2 md:items-start">
-      <a class="hover:text-cyan-400" href={url}>
+      <a
+        class="hover:bg-gradient-to-br hover:from-secondary-light hover:to-primary-light hover:bg-clip-text hover:text-transparent"
+        href={url}
+      >
         <h3 class="text-xl font-semibold">{name}</h3>
       </a>
       <div class="flex flex-wrap gap-2">
@@ -51,6 +55,6 @@ const {
       </div>
     </div>
 
-    <p class="mt-3 text-gray-400">{description}</p>
+    <p class="mt-3 dark:text-gray-400 text-gray-600">{description}</p>
   </div>
 </article>
