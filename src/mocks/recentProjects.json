@@ -1,23 +1,23 @@
 [
   {
-    "name": "Project #1",
+    "name": "Project #11",
     "description": "This is the first project",
     "skills": ["NodeJS", "ReactJS", "MongoDB", "TailwindCSS"],
-    "image": "https://placehold.co/144x144",
+    "image": "/144x144.svg",
     "url": "#!"
   },
   {
     "name": "Project #2",
     "description": "This is the second project",
     "skills": ["NodeJS", "MongoDB", "GraphQL"],
-    "image": "https://placehold.co/144x144",
+    "image": "/144x144.svg",
     "url": "#!"
   },
   {
     "name": "Project #3",
     "description": "This is the third project",
     "skills": ["NodeJS", "ExpressJS", "PostgreSQL"],
-    "image": "https://placehold.co/144x144",
+    "image": "/144x144.svg",
     "url": "#!"
   }
 ]
