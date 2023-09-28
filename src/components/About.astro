@@ -20,9 +20,9 @@ import Linkedin from "./svg/Linkedin.astro";
     <div class="animate-fade-down md:animate-fade-right">
       <h1 class="text-3xl font-bold">
         Hi there, I'm <span
-          class="bg-gradient-to-br from-secondary-light to-primary-light bg-clip-text text-transparent"
+          class="text-transparent bg-gradient-to-br from-secondary-light to-primary-light bg-clip-text"
         >
-          Alexander Valencia
+          &lt;Alexander Valencia /&gt;
         </span>
         <span class="w-auto h-auto">👋</span>
       </h1>
@@ -33,7 +33,7 @@ import Linkedin from "./svg/Linkedin.astro";
         learning and exploring new technologies and languages.
       </p>
 
-      <div class="mt-4 flex gap-1 mb-7 md:mb-0">
+      <div class="flex gap-1 mt-4 mb-7 md:mb-0">
         <Icon
           label="Go to Github profile"
           className="hover:translate-y-1 hover:text-zinc-600"
@@ -50,8 +50,8 @@ import Linkedin from "./svg/Linkedin.astro";
         </Icon>
       </div>
     </div>
-    <div class="shrink-0 hidden md:block md:animate-fade-left">
-      <img class="h-80 w-64" src="/256x320.svg" alt="Profile photo" />
+    <div class="hidden shrink-0 md:block md:animate-fade-left">
+      <img class="w-64 h-80" src="/256x320.svg" alt="Profile photo" />
     </div>
   </article>
 </section>

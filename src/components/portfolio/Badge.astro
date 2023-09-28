@@ -1,4 +1,6 @@
 ---
+import { badgeInfo } from "../../constants/badges";
+
 interface Props {
   name: string;
   bgColor?: string;
@@ -10,6 +12,8 @@ const {
   bgColor = "bg-slate-500",
   textColor = "text-neutral-50",
 }: Props = Astro.props;
+
+const current = badgeInfo[name];
 ---
 
 <spam
@@ -19,9 +23,15 @@ const {
     "py-1",
     "text-xs",
     "font-semibold",
-    bgColor,
-    textColor,
+    {
+      [current?.bgColor]: current?.bgColor,
+      [bgColor]: !current?.bgColor,
+    },
+    {
+      [current?.textColor]: current?.textColor,
+      [textColor]: !current?.textColor,
+    },
   ]}
 >
-  {name}
+  {current?.text || name}
 </spam>
