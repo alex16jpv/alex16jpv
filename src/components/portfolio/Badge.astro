@@ -3,35 +3,31 @@ import { badgeInfo } from "../../constants/badges";
 
 interface Props {
   name: string;
-  bgColor?: string;
-  textColor?: string;
 }
 
-const {
-  name,
-  bgColor = "bg-slate-500",
-  textColor = "text-neutral-50",
-}: Props = Astro.props;
+const { name }: Props = Astro.props;
 
-const current = badgeInfo[name];
+const colors: { [key: string]: string[] } = {
+  default: ["text-gray-600", "bg-gray-50", "ring-gray-500/10"],
+  gray: ["text-gray-600", "bg-gray-50", "ring-gray-500/10"],
+  red: ["text-red-700", "bg-red-50", "ring-red-600/10"],
+  yellow: ["text-yellow-800", "bg-yellow-50", "ring-yellow-600/20"],
+  green: ["text-green-700", "bg-green-50", "ring-green-600/20"],
+  blue: ["text-blue-700", "bg-blue-50", "ring-blue-700/10"],
+  indigo: ["text-indigo-700", "bg-indigo-50", "ring-indigo-700/10"],
+  purple: ["text-purple-700", "bg-purple-50", "ring-purple-700/10"],
+  pink: ["text-pink-700", "bg-pink-50", "ring-pink-700/10"],
+};
+
+const current = {
+  text: badgeInfo?.[name]?.text,
+  color: colors?.[badgeInfo?.[name]?.color] || colors.default,
+};
 ---
 
 <spam
-  class:list={[
-    "rounded-md",
-    "px-2",
-    "py-1",
-    "text-xs",
-    "font-semibold",
-    {
-      [current?.bgColor]: current?.bgColor,
-      [bgColor]: !current?.bgColor,
-    },
-    {
-      [current?.textColor]: current?.textColor,
-      [textColor]: !current?.textColor,
-    },
-  ]}
+  class:list={current.color}
+  class="inline-flex items-center px-2 py-1 text-xs font-medium rounded-md ring-1 ring-inset"
 >
   {current?.text || name}
 </spam>

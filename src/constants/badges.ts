@@ -1,85 +1,69 @@
 interface BadgeInfo {
   [key: string]: {
     text: string;
-    bgColor: string;
-    textColor: string;
+    color: string;
   };
 }
 
 export const badgeInfo: BadgeInfo = {
   NODE: {
     text: "Node.js",
-    bgColor: "bg-green-500",
-    textColor: "text-neutral-50",
+    color: "green",
   },
   REACT: {
     text: "React",
-    bgColor: "bg-blue-500",
-    textColor: "text-neutral-50",
+    color: "blue",
   },
   MONGODB: {
     text: "MongoDB",
-    bgColor: "bg-green-500",
-    textColor: "text-neutral-50",
+    color: "green",
   },
   POSTGRESQL: {
     text: "PostgreSQL",
-    bgColor: "bg-blue-500",
-    textColor: "text-neutral-50",
+    color: "blue",
   },
   TAILWINDCSS: {
     text: "Tailwind CSS",
-    bgColor: "bg-cyan-500",
-    textColor: "text-neutral-50",
+    color: "cyan",
   },
   TYPESCRIPT: {
     text: "TypeScript",
-    bgColor: "bg-blue-500",
-    textColor: "text-neutral-50",
+    color: "blue",
   },
   JAVASCRIPT: {
     text: "JavaScript",
-    bgColor: "bg-yellow-500",
-    textColor: "text-neutral-50",
+    color: "yellow",
   },
   GRAPHQL: {
     text: "GraphQL",
-    bgColor: "bg-pink-500",
-    textColor: "text-neutral-50",
+    color: "pink",
   },
   EXPRESS: {
     text: "Express.js",
-    bgColor: "bg-blue-500",
-    textColor: "text-neutral-50",
+    color: "blue",
   },
   CSS: {
     text: "CSS",
-    bgColor: "bg-blue-500",
-    textColor: "text-neutral-50",
+    color: "blue",
   },
   SQL: {
     text: "SQL",
-    bgColor: "bg-blue-500",
-    textColor: "text-neutral-50",
+    color: "blue",
   },
   PYTHON: {
     text: "Python",
-    bgColor: "bg-yellow-500",
-    textColor: "text-neutral-50",
+    color: "yellow",
   },
   AWS: {
     text: "AWS",
-    bgColor: "bg-orange-500",
-    textColor: "text-neutral-50",
+    color: "orange",
   },
   ASTRO: {
     text: "Astro",
-    bgColor: "bg-blue-500",
-    textColor: "text-neutral-50",
+    color: "blue",
   },
   VITE: {
     text: "Vite",
-    bgColor: "bg-blue-500",
-    textColor: "text-neutral-50",
+    color: "blue",
   },
 };
