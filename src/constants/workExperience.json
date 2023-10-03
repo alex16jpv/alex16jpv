@@ -21,7 +21,7 @@
     "url": "#!"
   },
   {
-    "name": "AtlanticSoft",
+    "name": "Atlanticsoft",
     "description": "Developed a Google Chrome extension to automate dropshipping processes for major e-commerce platforms such as Amazon, eBay, and Best Buy. Successfully processed thousands of orders within minutes. Utilized technologies including Node.js, Python, and AWS services such as Lambda, ECS, and queues to streamline and enhance the dropshipping workflow.",
     "skills": ["NODE", "PYTHON", "AWS"],
     "image": "/companyLogo/atlanticsoft.jpeg",
