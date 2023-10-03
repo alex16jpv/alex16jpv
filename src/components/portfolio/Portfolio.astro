@@ -19,7 +19,7 @@ import projects from "../../constants/projects.json";
   <div class="grid w-full gap-8 lg:gap-10 sm:grid-cols-2 xl:grid-cols-3">
     {
       projects.map((project) => (
-        <article class="relative max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-secondary dark:border-gray-700 hover:scale-[1.03] transition-transform duration-300 ease-out mx-auto">
+        <article class="relative w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-secondary dark:border-gray-700 hover:scale-[1.03] transition-transform duration-300 ease-out mx-auto">
           {project.isWIP && (
             <p class="absolute top-0 right-0 px-3 py-1 m-px text-sm font-bold tracking-widest text-red-500 uppercase translate-x-px -translate-y-px rounded-tr-lg rounded-bl-lg bg-red-600/20">
               WIP
