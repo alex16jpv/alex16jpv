@@ -2,23 +2,23 @@
   {
     "title": "Project 1",
     "description": "This is a project",
-    "image": "https://placehold.co/800x450",
-    "link": "https://www.google.com",
+    "image": "/800x450.svg",
+    "link": "#!",
     "repository": "https://www.github.com",
     "isWIP": true
   },
   {
     "title": "Project 2",
     "description": "This is a project",
-    "image": "https://placehold.co/800x450",
-    "link": "https://www.google.com",
+    "image": "/800x450.svg",
+    "link": "#!",
     "repository": "https://www.github.com",
     "isWIP": false
   },
   {
     "title": "Project 3",
     "description": "This is a project",
-    "image": "https://placehold.co/800x450",
+    "image": "/800x450.svg",
     "link": "",
     "repository": "https://www.github.com",
     "isWIP": true
@@ -26,8 +26,8 @@
   {
     "title": "Project 4",
     "description": "This is a project",
-    "image": "https://placehold.co/800x450",
-    "link": "https://www.google.com",
+    "image": "/800x450.svg",
+    "link": "#!",
     "repository": "https://www.github.com",
     "isWIP": false
   }
