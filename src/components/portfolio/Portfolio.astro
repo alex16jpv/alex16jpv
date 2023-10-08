@@ -41,12 +41,16 @@ const projectsData = projects.map((project) => ({
               WIP
             </p>
           )}
-          <Image class="rounded-t-lg aspect-video" src={project.image} alt="" />
+          <Image
+            class="rounded-t-lg aspect-video"
+            src={project.image}
+            alt={`Project ${project.title}`}
+          />
 
           <div class="p-5">
-            <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+            <h3 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">
               {project.title}
-            </h5>
+            </h3>
 
             <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 line-clamp-3">
               {project.description}
