@@ -1,7 +1,23 @@
 ---
+import { Image } from "astro:assets";
+import type { ImagesDictionary } from "../../types";
 import Arrow from "../svg/Arrow.astro";
 import Github from "../svg/Github.astro";
 import projects from "../../constants/projects.json";
+
+import TodoImage from "../../assets/images/todoAppV1.png";
+import SimpleBlogImage from "../../assets/images/simpleBlog.png";
+import defaultImage from "../../assets/images/800x450.svg";
+
+const projectImages: ImagesDictionary = {
+  todoApp: TodoImage,
+  simpleBlog: SimpleBlogImage,
+};
+
+const projectsData = projects.map((project) => ({
+  ...project,
+  image: projectImages?.[project.image] ?? defaultImage,
+}));
 ---
 
 <section class="flex flex-col max-w-screen-lg gap-4 px-3 py-6 mx-auto lg:gap-6">
@@ -18,14 +34,14 @@ import projects from "../../constants/projects.json";
 
   <div class="grid w-full gap-8 lg:gap-10 sm:grid-cols-2 xl:grid-cols-3">
     {
-      projects.map((project) => (
+      projectsData.map((project) => (
         <article class="relative w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-secondary dark:border-gray-700 hover:scale-[1.03] transition-transform duration-300 ease-out mx-auto">
           {project.isWIP && (
             <p class="absolute top-0 right-0 px-3 py-1 m-px text-sm font-bold tracking-widest text-red-500 uppercase translate-x-px -translate-y-px rounded-tr-lg rounded-bl-lg bg-red-600/20">
               WIP
             </p>
           )}
-          <img class="rounded-t-lg aspect-video" src={project.image} alt="" />
+          <Image class="rounded-t-lg aspect-video" src={project.image} alt="" />
 
           <div class="p-5">
             <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">

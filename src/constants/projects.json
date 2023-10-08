@@ -2,7 +2,7 @@
   {
     "title": "Todo App",
     "description": "",
-    "image": "/todoAppV1.png",
+    "image": "todoApp",
     "link": "https://todo-app-seven-chi.vercel.app/",
     "repository": "https://github.com/alex16jpv/Todo-App",
     "isWIP": true
@@ -10,7 +10,7 @@
   {
     "title": "Simple Blog",
     "description": "",
-    "image": "/simpleBlog.png",
+    "image": "simpleBlog",
     "link": "http://blog-sage-eta.vercel.app/",
     "repository": "https://github.com/alex16jpv/blog",
     "isWIP": false
@@ -18,7 +18,7 @@
   {
     "title": "URL Shortener",
     "description": "",
-    "image": "/800x450.svg",
+    "image": "",
     "link": "",
     "repository": "",
     "isWIP": false

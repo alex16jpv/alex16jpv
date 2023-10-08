@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+import ProfileImage from "../assets/images/256x320.svg";
 import Icon from "./Icon.astro";
 import Github from "./svg/Github.astro";
 import Linkedin from "./svg/Linkedin.astro";
@@ -52,7 +54,8 @@ import Linkedin from "./svg/Linkedin.astro";
       </div>
     </div>
     <div class="hidden shrink-0 md:block md:animate-fade-left">
-      <img class="w-64 h-80" src="/256x320.svg" alt="Profile photo" />
+      <!-- src="../assets/images/256x320.svg" alt="Profile photo" class="w-64 h-80" -->
+      <Image src={ProfileImage} alt="Profile photo" width={256} height={320} />
     </div>
   </article>
 </section>

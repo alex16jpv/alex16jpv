@@ -1,21 +1,32 @@
 ---
+import { Image } from "astro:assets";
 import Badge from "../portfolio/Badge.astro";
+import type { ImagesDictionary } from "../../types";
+
+import BlossomImage from "../../assets/images/companyLogo/blossom.jpeg";
+import AtlanticsoftImage from "../../assets/images/companyLogo/atlanticsoft.jpeg";
+import FluvipImage from "../../assets/images/companyLogo/fluvip.jpeg";
+import HelloBuildImage from "../../assets/images/companyLogo/hellobuild.jpeg";
+import DefaultImage from "../../assets/images/144x144.svg";
 
 interface Props {
   name: string;
   description: string;
-  image?: string;
+  image: string;
   skills?: string[];
   url?: string;
 }
 
-const {
-  name,
-  description,
-  image = "/144x144.svg",
-  skills = [],
-  url = "#!",
-} = Astro.props;
+const { name, description, image, skills = [], url = "#!" } = Astro.props;
+
+const images: ImagesDictionary = {
+  blossom: BlossomImage,
+  atlanticsoft: AtlanticsoftImage,
+  fluvip: FluvipImage,
+  hellobuild: HelloBuildImage,
+};
+
+const imageSrc = images?.[image] ?? DefaultImage;
 ---
 
 <article
@@ -23,9 +34,9 @@ const {
 >
   <div class="shrink-0">
     <a href={url}>
-      <img
+      <Image
         class="h-36 w-36 animate-flip-up animate-once animate-ease-out"
-        src={image}
+        src={imageSrc}
         alt={`Project ${name}`}
       />
     </a>

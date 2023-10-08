@@ -3,28 +3,28 @@
     "name": "Blossom",
     "description": "Developed online banking software using cutting-edge technologies, including Node.js, GraphQL, and PostgreSQL. Proficient in crafting complex database queries and optimizing them to enhance performance. Expertise in utilizing the Sequelize ORM for efficient data management.",
     "skills": ["NODE", "GRAPHQL", "MONGODB", "POSTGRESQL"],
-    "image": "/companyLogo/blossom.jpeg",
+    "image": "blossom",
     "url": "#!"
   },
   {
     "name": "HelloBuild",
     "description": "Collaborated on projects for clients such as Identifee and Homecu, facilitating the development of scalable platforms. Utilized technologies including Node.js, React.js, CSS, and SQL databases (specifically PostgreSQL). Proficient in handling queries and ORM tools like Sequelize. Proficient in API development and experienced in utilizing GraphQL for efficient data retrieval.",
     "skills": ["NODE", "REACT", "CSS", "GRAPHQL", "SQL", "POSTGRESQL"],
-    "image": "/companyLogo/hellobuild.jpeg",
+    "image": "hellobuild",
     "url": "#!"
   },
   {
     "name": "Fluvip",
     "description": "Contributed to the development of a platform connecting brands with top social media influencers across various platforms (Twitter, Facebook, Instagram, YouTube, Vine, and Snapchat). Primarily focused on React.js and Node.js development, leveraging AWS services like CodePipeline and Lambda to build a robust platform for seamless brand-influencer collaboration.",
     "skills": ["NODE", "EXPRESS", "MONGODB", "REACT", "CSS"],
-    "image": "/companyLogo/fluvip.jpeg",
+    "image": "fluvip",
     "url": "#!"
   },
   {
     "name": "Atlanticsoft",
     "description": "Developed a Google Chrome extension to automate dropshipping processes for major e-commerce platforms such as Amazon, eBay, and Best Buy. Successfully processed thousands of orders within minutes. Utilized technologies including Node.js, Python, and AWS services such as Lambda, ECS, and queues to streamline and enhance the dropshipping workflow.",
     "skills": ["NODE", "PYTHON", "AWS"],
-    "image": "/companyLogo/atlanticsoft.jpeg",
+    "image": "atlanticsoft",
     "url": "#!"
   }
 ]
