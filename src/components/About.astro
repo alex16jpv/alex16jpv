@@ -19,7 +19,9 @@ import Linkedin from "./svg/Linkedin.astro";
       "md:gap-x-24",
     ]}
   >
-    <div class="animate-fade-down md:animate-fade-right">
+    <div
+      class="animate-duration-200 md:animate-duration-300 animate-fade-down md:animate-fade-right"
+    >
       <h1 class="text-3xl font-bold">
         Hi there <span class="w-auto h-auto">👋</span>, I'm
         <br class="md:hidden" />
@@ -53,7 +55,9 @@ import Linkedin from "./svg/Linkedin.astro";
         </Icon>
       </div>
     </div>
-    <div class="hidden shrink-0 md:block md:animate-fade-left">
+    <div
+      class="hidden shrink-0 md:block animate-fade-left animate-duration-300"
+    >
       <!-- src="../assets/images/256x320.svg" alt="Profile photo" class="w-64 h-80" -->
       <Image src={ProfileImage} alt="Profile photo" width={256} height={320} />
     </div>
