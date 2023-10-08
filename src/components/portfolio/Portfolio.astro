@@ -52,10 +52,23 @@ const projectsData = projects.map((project) => ({
               {project.title}
             </h3>
 
-            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 line-clamp-3">
+            <p
+              class="mb-3 font-normal text-gray-700 dark:text-gray-400 line-clamp-3"
+              title={project.description}
+            >
               {project.description}
             </p>
-            <div class="flex justify-end mt-2 ">
+            <div class="flex justify-start mt-2">
+              {project.link && (
+                <a
+                  href={project.link}
+                  target="_blank"
+                  class="inline-flex items-center text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-3 py-2.5 text-center mr-2"
+                >
+                  Live Project <Arrow w={15} h={15} className="ml-2" />
+                </a>
+              )}
+
               {project.repository && (
                 <a
                   href={project.repository}
@@ -64,16 +77,6 @@ const projectsData = projects.map((project) => ({
                 >
                   <Github className="mr-2" />
                   Code
-                </a>
-              )}
-
-              {project.link && (
-                <a
-                  href={project.link}
-                  target="_blank"
-                  class="inline-flex items-center text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-3 py-2.5 text-center mr-2"
-                >
-                  Live Project <Arrow w={15} h={15} className="ml-2" />
                 </a>
               )}
             </div>

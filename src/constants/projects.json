@@ -1,7 +1,7 @@
 [
   {
     "title": "Todo App",
-    "description": "",
+    "description": "I developed a Todo app with a API using express and MongoDB for the backend, emphasizing maintenance and scalability. The frontend is built using React.js and TailwindCSS.",
     "image": "todoApp",
     "link": "https://todo-app-seven-chi.vercel.app/",
     "repository": "https://github.com/alex16jpv/Todo-App",
@@ -9,7 +9,7 @@
   },
   {
     "title": "Simple Blog",
-    "description": "",
+    "description": "I created a Simple blog based on .md files, using Gatsby.js",
     "image": "simpleBlog",
     "link": "http://blog-sage-eta.vercel.app/",
     "repository": "https://github.com/alex16jpv/blog",
@@ -17,7 +17,7 @@
   },
   {
     "title": "URL Shortener",
-    "description": "",
+    "description": "A basic URL shortener using Node.js, Nest and MongoDB.",
     "image": "",
     "link": "",
     "repository": "https://github.com/alex16jpv/url-shortener",
