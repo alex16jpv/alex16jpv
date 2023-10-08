@@ -1,34 +1,26 @@
 [
   {
-    "title": "Project 1",
-    "description": "This is a project",
-    "image": "/800x450.svg",
-    "link": "#!",
-    "repository": "https://www.github.com",
+    "title": "Todo App",
+    "description": "",
+    "image": "/todoAppV1.png",
+    "link": "https://todo-app-seven-chi.vercel.app/",
+    "repository": "https://github.com/alex16jpv/Todo-App",
     "isWIP": true
   },
   {
-    "title": "Project 2",
-    "description": "This is a project",
-    "image": "/800x450.svg",
-    "link": "#!",
-    "repository": "https://www.github.com",
+    "title": "Simple Blog",
+    "description": "",
+    "image": "/simpleBlog.png",
+    "link": "http://blog-sage-eta.vercel.app/",
+    "repository": "https://github.com/alex16jpv/blog",
     "isWIP": false
   },
   {
-    "title": "Project 3",
-    "description": "This is a project",
+    "title": "URL Shortener",
+    "description": "",
     "image": "/800x450.svg",
     "link": "",
-    "repository": "https://www.github.com",
-    "isWIP": true
-  },
-  {
-    "title": "Project 4",
-    "description": "This is a project",
-    "image": "/800x450.svg",
-    "link": "#!",
-    "repository": "https://www.github.com",
+    "repository": "",
     "isWIP": false
   }
 ]
