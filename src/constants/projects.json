@@ -3,7 +3,7 @@
     "title": "Todo App",
     "description": "I developed a Todo app with a API using express and MongoDB for the backend, emphasizing maintenance and scalability. The frontend is built using React.js and TailwindCSS.",
     "image": "todoApp",
-    "link": "https://todo-app-seven-chi.vercel.app/",
+    "link": "https://todo.alexconlag.com/",
     "repository": "https://github.com/alex16jpv/Todo-App",
     "isWIP": true
   },
@@ -11,7 +11,7 @@
     "title": "Simple Blog",
     "description": "I created a Simple blog based on .md files, using Gatsby.js",
     "image": "simpleBlog",
-    "link": "http://blog-sage-eta.vercel.app/",
+    "link": "http://blog.alexconlag.com/",
     "repository": "https://github.com/alex16jpv/blog",
     "isWIP": false
   },
