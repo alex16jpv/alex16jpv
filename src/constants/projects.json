@@ -1,5 +1,13 @@
 [
   {
+    "title": "dot-env",
+    "description": "A lightweight and easy-to-use library for loading environment variables from a .env file into the process.env object in Node.js applications.",
+    "image": "dotenv",
+    "link": "",
+    "repository": "https://github.com/alexconlag/dot-env",
+    "isWIP": false
+  },
+  {
     "title": "Todo App",
     "description": "I developed a Todo app with a API using express and MongoDB for the backend, emphasizing maintenance and scalability. The frontend is built using React.js and TailwindCSS.",
     "image": "todoApp",
