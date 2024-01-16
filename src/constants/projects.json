@@ -4,7 +4,7 @@
     "description": "A lightweight and easy-to-use library for loading environment variables from a .env file into the process.env object in Node.js applications.",
     "image": "dotenv",
     "link": "",
-    "repository": "https://github.com/alex16jpv/dot-env",
+    "repository": "https://github.com/alex16jpv/dotenv",
     "isWIP": false
   },
   {
