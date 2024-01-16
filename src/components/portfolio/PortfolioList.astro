@@ -1,0 +1,35 @@
+---
+import { type ProjectType } from "../../types";
+
+const projects: ProjectType[] = Astro.props.projects;
+---
+
+<!-- <div class="grid w-full gap-8 lg:gap-10 sm:grid-cols-2 xl:grid-cols-3"> -->
+<div class="flex flex-wrap gap-3 mt-3">
+  {
+    projects.map((project) => (
+      <article class="relative w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-secondary dark:border-gray-700 hover:scale-[1.01] transition-transform duration-300 ease-out mx-auto">
+        {project.isWIP && (
+          <p class="absolute top-0 right-0 px-3 py-1 m-px text-sm font-bold tracking-widest text-red-500 uppercase translate-x-px -translate-y-px rounded-tr-lg rounded-bl-lg bg-red-600/20">
+            WIP
+          </p>
+        )}
+
+        <a href={project.repository} target="_blank">
+          <div class="px-5 py-2">
+            <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+              {project.title}
+            </h3>
+
+            <p
+              class="font-normal text-gray-700 dark:text-gray-400 line-clamp-1"
+              title={project.description}
+            >
+              {project.description}
+            </p>
+          </div>
+        </a>
+      </article>
+    ))
+  }
+</div>

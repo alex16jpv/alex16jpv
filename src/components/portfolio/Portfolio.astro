@@ -7,6 +7,7 @@ import SimpleBlogImage from "../../assets/images/simpleBlog.png";
 import DotEnvImage from "../../assets/images/dotenv.png";
 import defaultImage from "../../assets/images/800x450.svg";
 import PortfolioGallery from "./PortfolioGallery.astro";
+import PortfolioList from "./PortfolioList.astro";
 
 const GALERY_SIZE = 3;
 
@@ -34,7 +35,7 @@ const projectsData = projects.map((project) => ({
     </h2>
   </header>
 
+  <!-- Display the first three items in gallery view and the remaining items in list view. -->
   <PortfolioGallery projects={projectsData?.slice(0, GALERY_SIZE)} />
-  <!-- TODO: replace this for the PortfolioList -->
-  <PortfolioGallery projects={projectsData?.slice(GALERY_SIZE)} />
+  <PortfolioList projects={projectsData?.slice(GALERY_SIZE)} />
 </section>
