@@ -7,6 +7,72 @@ import { type ProjectType } from "../../types";
 const projects: ProjectType[] = Astro.props.projects;
 ---
 
+<style>
+  dialog {
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 40px 40px rgba(0, 0, 0, 0.5);
+  }
+</style>
+
+<script>
+  const dialog = document.querySelector("dialog");
+  const showButtons = document.querySelectorAll(".btn-live");
+  const closeButton = document.querySelector("#closeDialog");
+  const continueButton = document.querySelector("#continueDialog");
+  let tempUrl = "#!";
+
+  showButtons.forEach((item: any) => {
+    if (item.dataset.isWip === "true") {
+      item.addEventListener("click", () => {
+        tempUrl = item.dataset.url;
+        dialog!.showModal();
+        continueButton!.setAttribute("href", tempUrl);
+      });
+    }
+  });
+  closeButton!.addEventListener("click", () => {
+    dialog!.close();
+  });
+  continueButton!.addEventListener("click", () => {
+    dialog!.close();
+  });
+</script>
+
+<dialog class="md:backdrop-blur-sm shadow-2xl w-full h-full">
+  <section
+    class="flex place-content-center place-items-center w-full h-full m-auto max-w-2xl"
+  >
+    <article class="bg-white p-5 rounded-lg">
+      <header class="flex place-content-between place-items-center mb-5">
+        <h2 class="text-xl font-bold tracking-tight text-gray-90">
+          Exciting Progress!
+        </h2>
+        <a
+          id="closeDialog"
+          href="#!"
+          class="btn-live inline-flex items-center text-white bg-gradient-to-br from-red-600 to-orange-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 rounded-lg text-sm px-3 py-2.5 text-center mr-2 font-bold"
+        >
+          ╳
+        </a>
+      </header>
+      <p class="mb-3 font-normal text-gray-700 line-clamp-6">
+        Exciting Developments Underway! While this project is in progress,
+        please note that certain features might still be in the works, and there
+        could be some impact on performance due to our utilization of free
+        services.
+      </p>
+      <a
+        id="continueDialog"
+        href="#!"
+        target="_blank"
+        class="btn-live inline-flex items-center text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-3 py-2.5 text-center mt-2"
+      >
+        Continue
+      </a>
+    </article>
+  </section>
+</dialog>
+
 <div class="grid w-full gap-8 lg:gap-10 sm:grid-cols-2">
   {
     projects.map((project) => (
@@ -46,9 +112,11 @@ const projects: ProjectType[] = Astro.props.projects;
             )}
             {project.link && (
               <a
-                href={project.link}
-                target="_blank"
-                class="inline-flex items-center text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-3 py-2.5 text-center mr-2"
+                href={project.isWIP ? "#!" : project.link}
+                target={project.isWIP ? "" : "_blank"}
+                data-url={project.link}
+                data-is-wip={project.isWIP.toString()}
+                class="btn-live inline-flex items-center text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-3 py-2.5 text-center mr-2"
               >
                 Live Project <Arrow w={15} h={15} className="ml-2" />
               </a>
