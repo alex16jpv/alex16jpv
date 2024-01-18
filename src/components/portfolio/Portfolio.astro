@@ -5,16 +5,18 @@ import projects from "../../constants/projects.json";
 import TodoImage from "../../assets/images/todoAppV1.png";
 import SimpleBlogImage from "../../assets/images/simpleBlog.png";
 import DotEnvImage from "../../assets/images/dotenv.png";
+import TicTacToeImage from "../../assets/images/ticTacToe.png";
 import defaultImage from "../../assets/images/800x450.svg";
 import PortfolioGallery from "./PortfolioGallery.astro";
 import PortfolioList from "./PortfolioList.astro";
 
-const GALERY_SIZE = 3;
+const GALERY_SIZE = 4;
 
 const projectImages: ImagesDictionary = {
   todoApp: TodoImage,
   simpleBlog: SimpleBlogImage,
   dotenv: DotEnvImage,
+  TicTacToe: TicTacToeImage,
 };
 
 const projectsData = projects.map((project) => ({

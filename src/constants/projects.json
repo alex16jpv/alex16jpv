@@ -8,11 +8,11 @@
     "isWIP": false
   },
   {
-    "title": "Todo App",
-    "description": "I developed a Todo app with a API using express and MongoDB for the backend, emphasizing maintenance and scalability. The frontend is built using React.js and TailwindCSS.",
-    "image": "todoApp",
-    "link": "https://todo.alexconlag.com/",
-    "repository": "https://github.com/alex16jpv/Todo-App",
+    "title": "Tic Tac Toe",
+    "description": "A simple Tic Tac Toe game using React.js",
+    "image": "TicTacToe",
+    "link": "https://ttt.alexconlag.com",
+    "repository": "https://github.com/alex16jpv/tic-tac-toe",
     "isWIP": true
   },
   {
@@ -22,6 +22,14 @@
     "link": "http://blog.alexconlag.com/",
     "repository": "https://github.com/alex16jpv/blog",
     "isWIP": false
+  },
+  {
+    "title": "Todo App",
+    "description": "I developed a Todo app with a API using express and MongoDB for the backend, emphasizing maintenance and scalability. The frontend is built using React.js and TailwindCSS.",
+    "image": "todoApp",
+    "link": "https://todo.alexconlag.com/",
+    "repository": "https://github.com/alex16jpv/Todo-App",
+    "isWIP": true
   },
   {
     "title": "URL Shortener",

@@ -7,7 +7,7 @@ import { type ProjectType } from "../../types";
 const projects: ProjectType[] = Astro.props.projects;
 ---
 
-<div class="grid w-full gap-8 lg:gap-10 sm:grid-cols-2 xl:grid-cols-3">
+<div class="grid w-full gap-8 lg:gap-10 sm:grid-cols-2">
   {
     projects.map((project) => (
       <article class="relative w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-secondary dark:border-gray-700 hover:scale-[1.03] transition-transform duration-300 ease-out mx-auto">
@@ -34,16 +34,6 @@ const projects: ProjectType[] = Astro.props.projects;
             {project.description}
           </p>
           <div class="flex justify-start mt-2">
-            {project.link && (
-              <a
-                href={project.link}
-                target="_blank"
-                class="inline-flex items-center text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-3 py-2.5 text-center mr-2"
-              >
-                Live Project <Arrow w={15} h={15} className="ml-2" />
-              </a>
-            )}
-
             {project.repository && (
               <a
                 href={project.repository}
@@ -52,6 +42,15 @@ const projects: ProjectType[] = Astro.props.projects;
               >
                 <Github className="mr-2" />
                 Code
+              </a>
+            )}
+            {project.link && (
+              <a
+                href={project.link}
+                target="_blank"
+                class="inline-flex items-center text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-3 py-2.5 text-center mr-2"
+              >
+                Live Project <Arrow w={15} h={15} className="ml-2" />
               </a>
             )}
           </div>

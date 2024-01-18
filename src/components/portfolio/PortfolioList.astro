@@ -4,8 +4,7 @@ import { type ProjectType } from "../../types";
 const projects: ProjectType[] = Astro.props.projects;
 ---
 
-<!-- <div class="grid w-full gap-8 lg:gap-10 sm:grid-cols-2 xl:grid-cols-3"> -->
-<div class="flex flex-wrap gap-3 mt-3">
+<div class="grid w-full gap-8 md:grid-cols-2 mt-3">
   {
     projects.map((project) => (
       <article class="relative w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-secondary dark:border-gray-700 hover:scale-[1.01] transition-transform duration-300 ease-out mx-auto">
@@ -22,7 +21,7 @@ const projects: ProjectType[] = Astro.props.projects;
             </h3>
 
             <p
-              class="font-normal text-gray-700 dark:text-gray-400 line-clamp-1"
+              class="font-normal text-gray-700 dark:text-gray-400 line-clamp-2"
               title={project.description}
             >
               {project.description}
