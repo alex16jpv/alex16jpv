@@ -8,20 +8,20 @@
     "isWIP": false
   },
   {
-    "title": "Tic Tac Toe",
-    "description": "A simple Tic Tac Toe game using React.js",
-    "image": "TicTacToe",
-    "link": "https://ttt.alexconlag.com",
-    "repository": "https://github.com/alex16jpv/tic-tac-toe",
-    "isWIP": true
-  },
-  {
     "title": "Simple Blog",
     "description": "I created a Simple blog based on .md files, using Gatsby.js",
     "image": "simpleBlog",
     "link": "http://blog.alexconlag.com/",
     "repository": "https://github.com/alex16jpv/blog",
     "isWIP": false
+  },
+  {
+    "title": "Tic Tac Toe",
+    "description": "A simple Tic Tac Toe game using React.js",
+    "image": "TicTacToe",
+    "link": "https://ttt.alexconlag.com",
+    "repository": "https://github.com/alex16jpv/tic-tac-toe",
+    "isWIP": true
   },
   {
     "title": "Todo App",
