@@ -37,7 +37,7 @@ const projectsData = projects.map((project) => ({
     </h2>
   </header>
 
-  <!-- Display the first three items in gallery view and the remaining items in list view. -->
+  <!-- Display the first four items in gallery view and the remaining items in list view. -->
   <PortfolioGallery projects={projectsData?.slice(0, GALERY_SIZE)} />
-  <PortfolioList projects={projectsData?.slice(GALERY_SIZE)} />
+  <!-- <PortfolioList projects={projectsData?.slice(GALERY_SIZE)} /> -->
 </section>
