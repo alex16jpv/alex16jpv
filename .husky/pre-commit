@@ -1,0 +1,22 @@
+#!/bin/sh
+# .husky/pre-commit
+
+# Get the commit message
+commit_message=$(git log -1 --pretty=%B)
+
+# Check if the commit message starts with "feat:"
+if echo "$commit_message" | grep -q "^feat:"; then
+  echo "Commit message starts with 'feat:'. Running build..."
+  # Run your action here, e.g., building the project
+  npm run build
+  git add dist
+  git commit -m "build: update dist 🚀"
+
+  # Check if the build was successful
+  if [ $? -ne 0 ]; then
+    echo "Build failed. Aborting commit."
+    exit 1
+  fi
+else
+  echo "Commit message does not start with 'feat:'. Skipping build."
+fi
