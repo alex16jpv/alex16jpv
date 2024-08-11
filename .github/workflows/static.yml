@@ -27,11 +27,12 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-      site_env: github
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Set SITE_ENV environment variable
+        run: echo "SITE_ENV=github" >> $GITHUB_ENV
       - name: Install dependencies
         run: npm ci
       - name: Run build
