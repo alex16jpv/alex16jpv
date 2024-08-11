@@ -1,8 +1,0 @@
-User-agent: *
-Allow: /
-
-# Host
-Host: https://www.alexconlag.com
-
-# Sitemaps
-Sitemap: https://www.alexconlag.com/sitemap.xml
